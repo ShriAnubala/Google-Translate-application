@@ -1,0 +1,15 @@
+{
+  "name": "google-translator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open --config watchForFileChanges=false",
+    "cypress:run": "cypress run"
+  },
+  "author": "Anubala",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.7.0"
+  }
+}

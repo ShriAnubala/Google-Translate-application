@@ -1,0 +1,6 @@
+{
+  "sourceLanguage": "German",
+  "translationLanguage": "Spanish" ,
+  "initialText": "Universum",
+  "expectedResult": "universo"
+}
