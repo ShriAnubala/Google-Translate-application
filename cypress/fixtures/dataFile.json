@@ -2,5 +2,6 @@
   "sourceLanguage": "German",
   "translationLanguage": "Spanish" ,
   "initialText": "Universum",
-  "expectedResult": "universo"
+  "expectedResult": "universo",
+  "wordToType": "bienVenidos!"
 }

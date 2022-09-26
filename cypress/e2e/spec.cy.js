@@ -43,17 +43,23 @@ describe('This is to verify google tranlation from one language to another', () 
       TP.gerResultText().should('have.text', `${data.initialText}`);
     });
   });
-  
-  it('Typing with Key board', () => {
+
+  it('Typing with virtual Key board', () => {
     TP.getSourceTextArea().clear();
     TP.getInputToolMenu().click()
     TP.getVirtualKeyboard().click();
-    TP.getShifKeyOnVgKeyboard().click();
-    TP.getCharacterOnVgKeyboard('H').click();
-    TP.getCharacterOnVgKeyboard('i').click();
-    TP.getShifKeyOnVgKeyboard().click();
-    TP.getCharacterOnVgKeyboard('!').click();
+    cy.get('@testData').then((data) => {
+      const word = data.wordToType.split('')
+      word.forEach(temp => {
+        cy.get('body').then((keypad) => {
+          if (keypad.find(`span[class="vk-cap"]:contains(${temp})`).length) {
+            TP.getCharacterOnVgKeyboard(temp).click()
+          } else {
+            TP.getShifKeyOnVgKeyboard().click();
+            TP.getCharacterOnVgKeyboard(temp).click();
+          }
+        });
+      })
+    });
   });
-
-
 })

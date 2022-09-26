@@ -47,6 +47,9 @@ export class TranslationPage {
     getCharacterOnVgKeyboard(character) {
         return cy.contains('span[class="vk-cap"]',`${character}`);
     };
+    getVgKeyboardContainer(){
+        return cy.get('#kbd');
+    };
 
 };
 export const translationPage = new TranslationPage();
