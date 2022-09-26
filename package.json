@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open --config watchForFileChanges=false",
-    "cypress:run": "cypress run"
+    "cypress:run:chrome": "cypress run  --headed --browser chrome",
+    "cypress:run:headless": "cypress run"
   },
   "author": "Anubala",
   "license": "ISC",
